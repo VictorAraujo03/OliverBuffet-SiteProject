@@ -1,0 +1,71 @@
+.shake-hover:hover {
+  animation: shake 0.5s ease;
+}
+
+ #contato {
+    background: green;
+    color: white;
+}   
+
+header {
+    background: green;
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+
+}
+
+.logo-oliver {
+  height: 200px;
+  width: auto;
+  max-height: 200px;
+}
+
+#fundo-fotos {
+  background-color: lightgreen;
+}
+
+ul li {
+    font-size: large;
+    font-weight: bold;
+}
+
+ul li:hover {
+    background: green;
+    color: white;
+}
+
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-3px); }
+  50%  { transform: translateX(3px); }
+  75%  { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
+
+#botao-enviar {
+  color: green; /* verde padrão */
+  transition: all 0.3s ease;
+}
+
+#botao-enviar:hover {
+  background-color: green; /* fundo verde */
+  color: #fff;               /* texto branco */
+  border-color: green;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer {
+    background: green;
+    color: white;
+}
+
+.lead {
+  color: black;
+  font-size: 1.2rem;
+}
