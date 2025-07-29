@@ -44,4 +44,4 @@ O site tem como objetivo:
 
 ---
 
-Feito com carinho para o Oliver Buffet
+Feito com carinho para o Oliver Buffet & Eventos 💚
