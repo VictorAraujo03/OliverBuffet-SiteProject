@@ -16,6 +16,11 @@ header {
 
 }
 
+#sobre-texto {
+  padding-right: 150px;
+  margin-right: 150px;
+}
+
 .logo-oliver {
   height: 200px;
   width: auto;
@@ -68,4 +73,31 @@ footer {
 .lead {
   color: black;
   font-size: 1.2rem;
+}
+
+
+/* Galeria de fotos */
+.galeria {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.galeria-grid img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.05);
 }
