@@ -52,6 +52,7 @@ ul li:hover {
 
 #botao-enviar {
   color: green; /* verde padrão */
+  border-radius: 5px;
   transition: all 0.3s ease;
 }
 
@@ -59,6 +60,11 @@ ul li:hover {
   background-color: green; /* fundo verde */
   color: #fff;               /* texto branco */
   border-color: green;
+}
+
+#imagem-salgados-celular {
+  transform: rotate(13deg);
+  transition: transform 0.6s ease;
 }
 
 body {
