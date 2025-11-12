@@ -69,42 +69,136 @@
         </nav>
     </header><!--  fim cabecalho -->
 
-    <section id="sobre" class="py-5 bg-light"> <!-- início sessão sobre -->
-        <div class="container">
+    <section class="tabs-container">
+    <div class="container">
+        
+        <!-- Navegação das Abas -->
+        <div class="tabs-nav">
+            <button class="tab-button active" onclick="switchTab('buffet')">
+                <span>🍽️ Oliver Buffet</span>
+            </button>
+            <button class="tab-button" onclick="switchTab('crepearia')" style="position: relative;">
+                <span>🥞 Crepearia</span>
+                <div class="badge-novo">NOVO!</div>
+            </button>
+        </div>
+
+        <!-- Conteúdo: BUFFET -->
+        <div id="tab-buffet" class="tab-content-item active">
             <div class="row align-items-center">
                 
-                <!-- Coluna do Texto -->
-                <div class="col-md-6 p-5">
-                    <h2 class="display-4 font-weight-bold mb-4 text-center">
-                        SOBRE NÓS
-                    </h2>
-                    <p class="lead">
-                        Nós da <strong>Oliver Buffet & Eventos</strong> nascemos com a missão de transformar momentos especiais em experiências inesquecíveis. <br>
-                    <p>
-                    <p class="lead">
-                        Começamos com um cardápio simples, mas encantador: crepes no palito, pipocas doces e salgadas, algodão doce e salgadinhos variados e diversos outros pratos. <br>
-                    </p>
-                    <p class="lead"> 
-                        Com o tempo, evoluímos, ampliando nossos serviços e conquistando clientes com carinho, sabor e profissionalismo. <br>
-                    </p>
-                    <p class="lead">
-                        Nosso diferencial está em oferecer uma estrutura completa, com equipe de garçons treinados, atendimento personalizado e tudo pensado para facilitar a vida de quem quer curtir a festa sem preocupações. <br>
-                    </p>
-                    <p class="lead">
-                        Seja para aniversários, casamentos, eventos corporativos ou celebrações em geral, o <strong>Oliver Buffet</strong> leva até você o sabor, o cuidado e a alegria que fazem a diferença.
-                    </p>
-                    </p>
+                <!-- Coluna Texto -->
+                <div class="col-lg-6">
+                    <div class="sobre-card">
+                        <div class="sobre-header">
+                            <h2 class="sobre-titulo">SOBRE NÓS</h2>
+                        </div>
+
+                        <!-- Features com ícones -->
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Nossa Missão</h4>
+                                <p>Transformar momentos especiais em experiências inesquecíveis com carinho, sabor e profissionalismo.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Cardápio Completo</h4>
+                                <p>Crepes no palito, pipocas doces e salgadas, algodão doce, salgadinhos variados e muito mais!</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Estrutura Completa</h4>
+                                <p>Equipe de garçons treinados, atendimento personalizado e tudo pensado para você curtir sem preocupações.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Para Todos os Eventos</h4>
+                                <p>Aniversários, casamentos, eventos corporativos ou celebrações em geral. Levamos até você o sabor que faz a diferença!</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Coluna da Imagem -->
-                <div class="col-md-5 text-center" id="imagem-salgados-celular">
-                    <img src="img/salgados.png" alt="Arte Oliver Buffet" class="img-fluid" style="max-width: 500px;">
+
+                <!-- Coluna Imagem -->
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="imagem-destaque">
+                        <img src="img/salgados.png" alt="Salgados Oliver Buffet">
+                        <div class="imagem-overlay">
+                            <h3>Qualidade Premium</h3>
+                            <p>Ingredientes selecionados e preparados com muito carinho para o seu evento!</p>
+                        </div>
+                    </div>
                 </div>
-                
-                
+
             </div>
         </div>
-    </section> <!-- fim sessão sobre -->
+
+        <!-- Conteúdo: CREPEARIA -->
+        <div id="tab-crepearia" class="tab-content-item">
+            <div class="crepearia-hero">
+                <span class="destaque-novo">✨ NOVIDADE ✨</span>
+                <h2 class="crepearia-titulo">OLIVER CREPEARIA</h2>
+                <p class="lead" style="color: #666; position: relative; z-index: 1;">
+                    Agora também oferecemos deliciosos crepes franceses! <br>
+                    Doces e salgados, feitos na hora para adoçar e temperar seu evento.
+                </p>
+
+                <!-- Grid de Produtos -->
+                <div class="produtos-grid">
+                    <div class="produto-card">
+                        <div class="produto-icon">🥞</div>
+                        <div class="produto-nome">Crepes Doces</div>
+                        <p class="produto-desc">Nutella, morango, doce de leite e muito mais!</p>
+                    </div>
+
+                    <div class="produto-card">
+                        <div class="produto-icon">🧀</div>
+                        <div class="produto-nome">Crepes Salgados</div>
+                        <p class="produto-desc">Frango, queijo, presunto e combinações especiais</p>
+                    </div>
+
+                    <div class="produto-card">
+                        <div class="produto-icon">🍫</div>
+                        <div class="produto-nome">Recheios Premium</div>
+                        <p class="produto-desc">Ingredientes selecionados e de primeira qualidade</p>
+                    </div>
+
+                    <div class="produto-card">
+                        <div class="produto-icon">👨‍🍳</div>
+                        <div class="produto-nome">Feito na Hora</div>
+                        <p class="produto-desc">Preparados ao vivo para garantir frescor e sabor!</p>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="mt-5">
+                    <a href="https://www.ifood.com.br/delivery/sao-paulo-sp/oliver-crepearia-parque-paulistano/27c2fac3-c085-4c5b-87d9-adf62f581c2e" target="_blank" class="btn btn-danger btn-lg" style="border-radius: 50px; padding: 15px 40px; font-weight: bold;">
+                        Faça seu pedido agora pelo IFood!
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
     <!-- início seção de galeria de fotos -->
     <section class="galeria py-5 pb-6 bg-light">
@@ -279,6 +373,48 @@
     overlay.addEventListener('click', () => overlay.remove());
   });
 });
+
+
+//ATUALIZAÇÃO DO SOBRE NOS - 12/11
+// Sistema de Abas
+    function switchTab(tabName) {
+        // Remove active de todos os botões e conteúdos
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content-item').forEach(content => content.classList.remove('active'));
+
+        // Adiciona active no botão e conteúdo selecionado
+        event.target.closest('.tab-button').classList.add('active');
+        document.getElementById('tab-' + tabName).classList.add('active');
+
+        // Scroll suave até a seção
+        document.querySelector('.tabs-container').scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+        });
+    }
+
+    // Animação de scroll reveal (leve e performático)
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observa os elementos para animação
+    document.querySelectorAll('.feature-box, .produto-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.6s ease';
+        observer.observe(el);
+    });
 </script>
 
 
