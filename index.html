@@ -77,10 +77,14 @@
             <button class="tab-button active" onclick="switchTab('buffet')">
                 <span>🍽️ Oliver Buffet</span>
             </button>
-            <button class="tab-button" onclick="switchTab('crepearia')" style="position: relative;">
-                <span>🥞 Crepearia</span>
+        
+            <!-- Adicione uma div wrapper -->
+            <div style="position: relative; display: inline-block;">
+                <button class="tab-button" onclick="switchTab('crepearia')">
+                    <span>🥞 Crepearia</span>
+                </button>
                 <div class="badge-novo">NOVO!</div>
-            </button>
+            </div>
         </div>
 
         <!-- Conteúdo: BUFFET -->
@@ -88,10 +92,10 @@
             <div class="row align-items-center">
                 
                 <!-- Coluna Texto -->
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div class="sobre-card">
                         <div class="sobre-header">
-                            <h2 class="sobre-titulo">SOBRE NÓS</h2>
+                            <h2 class="sobre-titulo" >SOBRE NÓS</h2>
                         </div>
 
                         <!-- Features com ícones -->
@@ -138,7 +142,7 @@
                 </div>
 
                 <!-- Coluna Imagem -->
-                <div class="col-lg-6 mt-4 mt-lg-0">
+                <!--<div class="col-lg-6 mt-4 mt-lg-0">
                     <div class="imagem-destaque">
                         <img src="img/salgados.png" alt="Salgados Oliver Buffet">
                         <div class="imagem-overlay">
@@ -146,7 +150,7 @@
                             <p>Ingredientes selecionados e preparados com muito carinho para o seu evento!</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -157,7 +161,7 @@
                 <span class="destaque-novo">✨ NOVIDADE ✨</span>
                 <h2 class="crepearia-titulo">OLIVER CREPEARIA</h2>
                 <p class="lead" style="color: #666; position: relative; z-index: 1;">
-                    Agora também oferecemos deliciosos crepes franceses! <br>
+                    Agora também oferecemos deliciosos crepes no palito! <br>
                     Doces e salgados, feitos na hora para adoçar e temperar seu evento.
                 </p>
 
@@ -200,26 +204,48 @@
     </div>
 </section>
 
-    <!-- início seção de galeria de fotos -->
     <section class="galeria py-5 pb-6 bg-light">
-        <div class="container">
-        <div class="col-md-12 ">
-        <h2 class="display-4 font-weight-bold mb-4 text-center" style="text-transform: uppercase;">Galeria</h2>
-        <p class="lead mb-4" style="text-transform: uppercase;">Conheça nossa equipe e nossos eventos</p>
-      
-        <div class="galeria-grid">
-          <img src="img/imagem1.jpg" alt="Equipe Oliver Buffet" />
-          <img src="img/imagem2.jpg" alt="Crepes no palito" />
-          <img src="img/imagem3.jpg" alt="Nossos Fondue" />
-          <img src="img/imagem4.jpg" alt="Algodão doce" />
-          <img src="img/imagem5.jpg" alt="Equipe Oliver Buffet 2" />
-          <img src="img/imagem6.jpg" alt="Pipocas" />
-          <img src="img/imagem7.jpg" alt="Equipe Oliver Buffet 3" />
-          <img src="img/imagem8.jpg" alt="Equipe Oliver Buffet 4" />
-          </div>
-          </div>
+    <div class="container">
+        <div class="col-md-12">
+            <h2 class="display-4 font-weight-bold mb-4 text-center" style="text-transform: uppercase;">Galeria</h2>
+            <p class="lead mb-4 text-center" style="text-transform: uppercase;">Conheça nossa equipe e nossos eventos</p>
+        
+            <!-- Grid de Imagens -->
+            <div class="galeria-grid">
+                <img src="img/imagem1.jpg" alt="Equipe Oliver Buffet" onclick="openGallery(0)" />
+                <img src="img/imagem2.jpg" alt="Crepes no palito" onclick="openGallery(1)" />
+                <img src="img/imagem3.jpg" alt="Nossos Fondue" onclick="openGallery(2)" />
+                <img src="img/imagem4.jpg" alt="Algodão doce" onclick="openGallery(3)" />
+                <img src="img/imagem5.jpg" alt="Equipe Oliver Buffet 2" onclick="openGallery(4)" />
+                <img src="img/imagem6.jpg" alt="Pipocas" onclick="openGallery(5)" />
+                <img src="img/imagem7.jpg" alt="Equipe Oliver Buffet 3" onclick="openGallery(6)" />
+                <img src="img/imagem8.jpg" alt="Equipe Oliver Buffet 4" onclick="openGallery(7)" />
+            </div>
         </div>
-      </section> <!-- fim seção de botoes do carrossel -->
+    </div>
+
+    <!-- Modal de Visualização com Setas -->
+    <div id="galleryModal" class="gallery-modal" onclick="closeGallery(event)">
+        <span class="gallery-close" onclick="closeGallery(event)">&times;</span>
+        
+        <!-- Seta Esquerda -->
+        <button class="gallery-arrow gallery-arrow-left" onclick="changeImage(-1); event.stopPropagation();">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <!-- Imagem -->
+        <div class="gallery-content">
+            <img id="galleryImage" src="" alt="">
+            <div class="gallery-caption" id="galleryCaption"></div>
+            <div class="gallery-counter" id="galleryCounter"></div>
+        </div>
+        
+        <!-- Seta Direita -->
+        <button class="gallery-arrow gallery-arrow-right" onclick="changeImage(1); event.stopPropagation();">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</section>
 
     <footer id="contato" class="pt-5"> <!--  inicio rodape -->
         <div class="container">
@@ -346,34 +372,6 @@
         });
     });
 
-    // Galeria de fotos
-    document.querySelectorAll('.galeria-grid img').forEach(img => {
-  img.addEventListener('click', function() {
-    const overlay = document.createElement('div');
-    overlay.style.position = 'fixed';
-    overlay.style.top = 0;
-    overlay.style.left = 0;
-    overlay.style.width = '100%';
-    overlay.style.height = '100%';
-    overlay.style.background = 'rgba(0,0,0,0.8)';
-    overlay.style.display = 'flex';
-    overlay.style.alignItems = 'center';
-    overlay.style.justifyContent = 'center';
-    overlay.style.zIndex = 9999;
-
-    const fullImg = document.createElement('img');
-    fullImg.src = this.src;
-    fullImg.style.maxWidth = '90%';
-    fullImg.style.maxHeight = '90%';
-    fullImg.style.borderRadius = '10px';
-
-    overlay.appendChild(fullImg);
-    document.body.appendChild(overlay);
-
-    overlay.addEventListener('click', () => overlay.remove());
-  });
-});
-
 
 //ATUALIZAÇÃO DO SOBRE NOS - 12/11
 // Sistema de Abas
@@ -415,6 +413,74 @@
         el.style.transition = 'all 0.6s ease';
         observer.observe(el);
     });
+
+    // Array com as imagens da galeria
+const galleryImages = [
+    { src: 'img/imagem1.jpg', alt: 'Equipe Oliver Buffet' },
+    { src: 'img/imagem2.jpg', alt: 'Crepes no palito' },
+    { src: 'img/imagem3.jpg', alt: 'Nossos Fondue' },
+    { src: 'img/imagem4.jpg', alt: 'Algodão doce' },
+    { src: 'img/imagem5.jpg', alt: 'Equipe Oliver Buffet 2' },
+    { src: 'img/imagem6.jpg', alt: 'Pipocas' },
+    { src: 'img/imagem7.jpg', alt: 'Equipe Oliver Buffet 3' },
+    { src: 'img/imagem8.jpg', alt: 'Equipe Oliver Buffet 4' }
+];
+
+let currentImageIndex = 0;
+
+// Abrir galeria
+function openGallery(index) {
+    currentImageIndex = index;
+    showImage();
+    document.getElementById('galleryModal').classList.add('active');
+    document.body.style.overflow = 'hidden'; // Bloqueia scroll da página
+}
+
+// Fechar galeria
+function closeGallery(event) {
+    if (event.target.id === 'galleryModal' || event.target.classList.contains('gallery-close')) {
+        document.getElementById('galleryModal').classList.remove('active');
+        document.body.style.overflow = 'auto'; // Libera scroll da página
+    }
+}
+
+// Mudar imagem
+function changeImage(direction) {
+    currentImageIndex += direction;
+    
+    // Loop infinito
+    if (currentImageIndex < 0) {
+        currentImageIndex = galleryImages.length - 1;
+    } else if (currentImageIndex >= galleryImages.length) {
+        currentImageIndex = 0;
+    }
+    
+    showImage();
+}
+
+// Mostrar imagem atual
+function showImage() {
+    const img = galleryImages[currentImageIndex];
+    document.getElementById('galleryImage').src = img.src;
+    document.getElementById('galleryCaption').textContent = img.alt;
+    document.getElementById('galleryCounter').textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+}
+
+// Navegação por teclado
+document.addEventListener('keydown', function(event) {
+    const modal = document.getElementById('galleryModal');
+    
+    if (modal.classList.contains('active')) {
+        if (event.key === 'ArrowLeft') {
+            changeImage(-1);
+        } else if (event.key === 'ArrowRight') {
+            changeImage(1);
+        } else if (event.key === 'Escape') {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    }
+});
 </script>
 
 
