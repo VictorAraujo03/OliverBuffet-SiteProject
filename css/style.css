@@ -10,10 +10,13 @@
 header {
     background: green;
     color: white;
-    text-align: center;
     width: 100%;
     margin: auto;
+    padding: 1rem 0; /* Padding vertical ao invés de height fixo */
+}
 
+.navbar {
+    padding: 0.5rem 1rem;
 }
 
 #sobre-texto {
@@ -22,9 +25,9 @@ header {
 }
 
 .logo-oliver {
-  height: 200px;
-  width: auto;
-  max-height: 200px;
+    height: 200px !important;
+    width: auto !important;
+    max-width: none !important;
 }
 
 #fundo-fotos {
@@ -645,4 +648,133 @@ footer {
         padding: 5px 15px;
     }
 }
+
+
+/* Modal de Sucesso */
+.modal-sucesso {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeInModal 0.3s ease;
+}
+
+.modal-sucesso.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-sucesso-content {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.4s ease;
+    position: relative;
+}
+
+.modal-sucesso-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    animation: scaleIn 0.5s ease;
+}
+
+.modal-sucesso-icon i {
+    color: white;
+    font-size: 40px;
+}
+
+.modal-sucesso-content h2 {
+    color: #28a745;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.modal-sucesso-content p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.btn-modal-ok {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-modal-ok:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(40, 167, 69, 0.3);
+}
+
+/* Animações */
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    0% { 
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% { 
+        transform: scale(1.2);
+    }
+    100% { 
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .modal-sucesso-content {
+        padding: 30px 20px;
+    }
+    
+    .modal-sucesso-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-sucesso-content p {
+        font-size: 1rem;
+    }
+}
+
     
