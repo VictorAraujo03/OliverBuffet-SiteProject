@@ -778,3 +778,386 @@ footer {
 }
 
     
+/* ============================================
+   MOBILE - Telas até 768px
+============================================ */
+@media (max-width: 768px) {
+    
+    /* HEADER */
+    header {
+        padding: 1rem 0;
+    }
+    
+    .navbar {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .navbar-brand {
+        margin: 0 auto 15px !important;
+    }
+    
+    .logo-oliver {
+        height: 150px !important; /* LOGO MAIOR */
+        max-height: 150px !important;
+        width: auto !important;
+    }
+    
+    /* ESCONDE O HAMBURGUER */
+    .navbar-toggler {
+        display: none !important;
+    }
+    
+    .navbar-collapse {
+        display: flex !important;
+        width: 100%;
+    }
+    
+    .navbar-nav {
+        flex-direction: row !important;
+        justify-content: center;
+        gap: 25px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.3rem !important;
+    }
+    
+    .navbar-nav i {
+        font-size: 1.8rem !important; /* ÍCONES PROPORCIONAIS */
+    }
+    
+    /* ABAS */
+    .tabs-container {
+        padding: 30px 0;
+    }
+    
+    .tabs-nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 15px;
+    }
+    
+    .tab-button {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+    
+    .badge-novo {
+        top: -8px;
+        right: -8px;
+        font-size: 0.6rem;
+        padding: 3px 8px;
+    }
+    
+    /* SOBRE NÓS */
+    .sobre-card {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .sobre-titulo {
+        font-size: 1.8rem !important;
+        text-align: center;
+    }
+    
+    .feature-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .feature-icon {
+        margin: 0 auto 15px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .feature-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .feature-text h4 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    
+    .feature-text p {
+        font-size: 0.9rem;
+    }
+    
+    /* CREPEARIA */
+    .crepearia-hero {
+        padding: 30px 20px;
+    }
+    
+    .crepearia-hero::before {
+        font-size: 8rem;
+    }
+    
+    .crepearia-titulo {
+        font-size: 1.8rem !important;
+    }
+    
+    .destaque-novo {
+        font-size: 0.8rem;
+        padding: 6px 15px;
+    }
+    
+    .produtos-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .produto-card {
+        padding: 20px;
+    }
+    
+    .produto-icon {
+        font-size: 3rem;
+    }
+    
+    .produto-nome {
+        font-size: 1.1rem;
+    }
+    
+    /* GALERIA */
+    .galeria {
+        padding: 30px 15px;
+    }
+    
+    .galeria h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    .galeria p.lead {
+        font-size: 0.9rem;
+    }
+    
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .galeria-grid img {
+        height: auto !important; /* IMAGENS INTEIRAS */
+        max-height: none !important;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    
+    /* Modal da Galeria */
+    .gallery-close {
+        top: 15px;
+        right: 20px;
+        font-size: 35px;
+    }
+    
+    .gallery-arrow {
+        font-size: 20px;
+        padding: 15px 10px;
+    }
+    
+    .gallery-arrow-left {
+        left: 10px;
+    }
+    
+    .gallery-arrow-right {
+        right: 10px;
+    }
+    
+    .gallery-counter {
+        font-size: 14px;
+        padding: 5px 15px;
+    }
+    
+    .gallery-caption {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    /* RODAPÉ */
+    footer {
+        padding: 30px 0 !important;
+    }
+    
+    footer h4 {
+        font-size: 1.5rem !important;
+        text-align: center;
+    }
+    
+    footer p.lead {
+        font-size: 0.9rem !important;
+        text-align: center;
+    }
+    
+    footer .bg-danger {
+        font-size: 0.8em !important;
+        margin: 10px 0;
+    }
+    
+    /* Formulário no Rodapé */
+    #formulario .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #formulario input {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    
+    #formulario .input-group-append {
+        width: 100%;
+    }
+    
+    #botao-enviar {
+        width: 100%;
+        padding: 12px !important;
+    }
+    
+    /* CHECKBOX E LABEL DOS TERMOS */
+    #formulario .form-check {
+        margin-top: 15px !important;
+        text-align: left;
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 12px;
+        width: 100%;
+        padding: 0 !important;
+    }
+    
+    #formulario .form-check-input {
+        width: 24px !important;
+        height: 24px !important;
+        min-width: 24px !important;
+        margin: 3px 0 0 0 !important;
+        flex-shrink: 0 !important;
+        cursor: pointer;
+        position: relative !important;
+    }
+    
+    #formulario .form-check-label {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        flex: 1;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        cursor: pointer;
+        max-width: calc(100% - 36px);
+    }
+    
+    footer .shake-hover {
+        font-size: 1.5rem !important;
+    }
+    
+    /* Modal de Sucesso */
+    .modal-sucesso-content {
+        padding: 30px 20px;
+        margin: 0 15px;
+    }
+    
+    .modal-sucesso-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .modal-sucesso-icon i {
+        font-size: 30px;
+    }
+    
+    .modal-sucesso-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-sucesso-content p {
+        font-size: 0.95rem;
+    }
+    
+    .btn-modal-ok {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   MOBILE PEQUENO - Telas até 480px
+============================================ */
+@media (max-width: 480px) {
+    
+    .logo-oliver {
+        height: 120px !important; /* AJUSTADO PARA TELAS MENORES */
+    }
+    
+    #formulario .form-check-input {
+        width: 20px !important;
+        height: 20px !important;
+        min-width: 20px !important;
+    }
+    
+    #formulario .form-check-label {
+        font-size: 0.9rem !important;
+    }
+    
+    .navbar-nav i {
+        font-size: 1.5rem !important; /* ÍCONES MENORES EM TELAS PEQUENAS */
+    }
+    
+    .navbar-nav {
+        gap: 20px;
+    }
+    
+    .sobre-titulo {
+        font-size: 1.5rem !important;
+    }
+    
+    .crepearia-titulo {
+        font-size: 1.5rem !important;
+    }
+    
+    .galeria h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    footer h4 {
+        font-size: 1.2rem !important;
+    }
+    
+    .tab-button {
+        font-size: 0.8rem;
+        padding: 10px 15px;
+    }
+}
+
+/* ============================================
+   AJUSTES GERAIS PARA TODOS OS TAMANHOS
+============================================ */
+
+/* Previne overflow horizontal */
+body {
+    overflow-x: hidden;
+}
+
+/* Container responsivo */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Imagens responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Textos não quebram layout */
+* {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
