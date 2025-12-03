@@ -561,6 +561,7 @@ footer {
     padding: 15px;
     font-size: 18px;
     margin-top: 10px;
+    display: none !important;
 }
 
 /* Contador */
@@ -979,6 +980,7 @@ footer {
     .gallery-caption {
         font-size: 14px;
         padding: 10px;
+        display: none !important;
     }
     
     /* RODAPÉ */
