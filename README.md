@@ -1,6 +1,7 @@
 # Oliver Buffet & Eventos
 
 Este é o site oficial do **Oliver Buffet & Eventos**, criado para apresentar os serviços do buffet e facilitar o contato com futuros clientes interessados em realizar orçamentos.
+- PageTest: https://victoraraujo03.github.io/OliverBuffet-SiteProject/
 
 ## Objetivo
 
