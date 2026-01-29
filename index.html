@@ -11,7 +11,6 @@
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="fontawesome-web/css/all.css">
 
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -40,46 +39,42 @@
 
 <body>
     <header class="p-0"><!--  inicio cabecalho -->
-        <nav class="navbar navbar-expand-sm navbar-light d-flex align-items-center p-0">
-            <div class="container p-0">
-                <a href="index.html" class="navbar-brand p-0">
-                    <img src="img/logo_oliver_buffet.png" class="d-inline-block align-top logo-oliver" alt="Oliver Buffet">        
-                </a>
+    <nav class="navbar navbar-expand-sm navbar-light d-flex align-items-center p-0">
+        <div class="container p-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="img/logo_oliver_buffet.png" class="d-inline-block align-top logo-oliver" alt="Oliver Buffet">        
+            </a>
 
-                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
-                    <span class="navbar-toggler-icon"></span>
+            <!-- Botão Hambúrguer -->
+            <button class="navbar-toggler-custom" id="menuToggle" aria-label="Menu de redes sociais">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
 
-                    </span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="nav-principal">
-                    <ul class="navbar-nav ml-auto text-uppercase font-weight-bold">
-                        <li class="navbar-item">
-                            <a href="https://www.facebook.com/p/Oliver-buffet-e-eventos-100064851603531/?locale=pt_BR" target="_blank" class="nav-link text-light">
-                                <i class="fab fa-facebook-f fa-2x mr-2"></i>
-                            </a>
-                        </li>
-                        <li class="navbar-item">
-                            <a href="https://www.instagram.com/oliverbuffe/" target="_blank" class="nav-link text-light">
-                                <i class="fa-brands fa-instagram fa-2x mr-2"></i>
-                            </a>
-                        </li>
-                        <li class="navbar-item">
-                            <a href="https://wa.me/+5511979628033" target="_blank" class="nav-link text-light">
-                                <i class="fa-brands fa-whatsapp fa-2x"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                </div>
-            </div>
-
+            <!-- Menu de Redes Sociais -->
+            <div class="social-menu" id="socialMenu">
+                <ul class="navbar-nav ml-auto text-uppercase font-weight-bold">
+                    <li class="navbar-item">
+                        <a href="https://www.facebook.com/p/Oliver-buffet-e-eventos-100064851603531/?locale=pt_BR" target="_blank" class="nav-link text-light">
+                            <i class="fab fa-facebook-f fa-2x mr-2"></i>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="https://www.instagram.com/oliverbuffe/" target="_blank" class="nav-link text-light">
+                            <i class="fa-brands fa-instagram fa-2x mr-2"></i>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="https://wa.me/+5511979628033" target="_blank" class="nav-link text-light">
+                            <i class="fa-brands fa-whatsapp fa-2x"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-
-        </nav>
-    </header><!--  fim cabecalho -->
+    </nav>
+</header><!--  fim cabecalho -->
 
     <section class="tabs-container">
     <div class="container">
@@ -163,7 +158,7 @@
                 <p class="lead" style="color: #666; position: relative; z-index: 1;">
                     Agora também oferecemos deliciosos crepes no palito! <br>
                     Doces e salgados, feitos na hora para adoçar e temperar seu evento.
-                    Venha conhecer nosso espaço, estamos localizado: 
+                    Venha conhecer nosso espaço, estamos localizado: <br>
                     <a href="https://maps.app.goo.gl/4DkwxToW4sf2ftAR7" target="_blank" style="color: #d84315; font-weight: bold; text-decoration: underline;">
                         Rua Gonçalves Ribeiro, 832 - Parque Paulistano, São Paulo - SP, 08060-000
                     </a>.
@@ -202,11 +197,6 @@
                         Faça seu pedido agora pelo IFood!
                     </a>
                 </div>
-                <!-- <div class="mt-2">
-                    <a href="https://www.ifood.com.br/delivery/sao-paulo-sp/oliver-crepearia-parque-paulistano/27c2fac3-c085-4c5b-87d9-adf62f581c2e" target="_blank" class="btn btn-warning btn-lg" style="border-radius: 50px; padding: 15px 40px; font-weight: bold;">
-                        Faça seu pedido agora pelo Keeta!
-                    </a>
-                </div> -->
             </div>
         </div>
 
@@ -272,8 +262,8 @@
                         </p>
                         <form class="mt-4 mb-4" id="formulario">
                             <div class="input-group input-group-lg">
-                                <input id="nome" name="nome" type="text" placeholder="Nome" class="form-control mr-2" required>
-                                <input id="telefone" name="telefone" type="text" placeholder="Número" class="form-control mr-2" required>
+                                <input id="nome" name="nome" type="text" placeholder="Nome Completo" class="form-control mr-2" minlength="3" maxlength="30" required>
+                                <input id="telefone" name="telefone" type="text" placeholder="Número de Telefone" class="form-control mr-2" required>
                                 <div class="input-group-append">
                                     <button type="submit" class="btn btn-light" id="botao-enviar" type="submit">ENVIAR <i class="fa-solid fa-paper-plane"></i></button>
                                     
@@ -312,249 +302,8 @@
     <script src="https://unpkg.com/imask"></script>
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script JS-->
+     <script src="js/script.js"></script>
 
-    <!-- Javascript -->
-    <script>
-// ==================================================
-// MÁSCARA E VALIDAÇÃO DOS CAMPOS
-// ==================================================
-
-// Máscara no telefone
-var telefone = document.getElementById('telefone');
-var maskOptions = {
-    mask: '(00) 00000-0000'
-};
-var mask = IMask(telefone, maskOptions);
-
-// Validação do nome (bloqueia números e símbolos)
-var nomeInput = document.getElementById('nome');
-nomeInput.addEventListener('input', function () {
-    this.value = this.value.replace(/[^A-Za-zÀ-ÿ\s]/g, '');
-});
-
-// Mensagens personalizadas de validação
-const termos = document.getElementById("termosContato");
-
-nomeInput.addEventListener("invalid", function () {
-    nomeInput.setCustomValidity("Por favor, insira seu nome.");
-});
-nomeInput.addEventListener("input", function () {
-    nomeInput.setCustomValidity("");
-});
-
-telefone.addEventListener("invalid", function () {
-    telefone.setCustomValidity("Por favor, insira seu número de telefone.");
-});
-telefone.addEventListener("input", function () {
-    telefone.setCustomValidity("");
-});
-
-termos.addEventListener("invalid", function () {
-    termos.setCustomValidity("Você precisa aceitar os termos para continuar.");
-});
-termos.addEventListener("input", function () {
-    termos.setCustomValidity("");
-});
-
-// ==================================================
-// SISTEMA DE ABAS
-// ==================================================
-
-function switchTab(tabName) {
-    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-    document.querySelectorAll('.tab-content-item').forEach(content => content.classList.remove('active'));
-    event.target.closest('.tab-button').classList.add('active');
-    document.getElementById('tab-' + tabName).classList.add('active');
-    document.querySelector('.tabs-container').scrollIntoView({ 
-        behavior: 'smooth', 
-        block: 'start' 
-    });
-}
-
-// Animação de scroll reveal
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.feature-box, .produto-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.6s ease';
-    observer.observe(el);
-});
-
-// ==================================================
-// GALERIA DE FOTOS
-// ==================================================
-
-const galleryImages = [
-    { src: 'img/imagem1.jpg', alt: 'Equipe Oliver Buffet' },
-    { src: 'img/imagem2.jpg', alt: 'Crepes no palito' },
-    { src: 'img/imagem3.jpg', alt: 'Nossos Fondue' },
-    { src: 'img/imagem4.jpg', alt: 'Algodão doce' },
-    { src: 'img/imagem5.jpg', alt: 'Equipe Oliver Buffet 2' },
-    { src: 'img/imagem6.jpg', alt: 'Pipocas' },
-    { src: 'img/imagem7.jpg', alt: 'Equipe Oliver Buffet 3' },
-    { src: 'img/imagem8.jpg', alt: 'Equipe Oliver Buffet 4' }
-];
-
-let currentImageIndex = 0;
-
-function openGallery(index) {
-    currentImageIndex = index;
-    showImage();
-    document.getElementById('galleryModal').classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeGallery(event) {
-    if (event.target.id === 'galleryModal' || event.target.classList.contains('gallery-close')) {
-        document.getElementById('galleryModal').classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
-}
-
-function changeImage(direction) {
-    currentImageIndex += direction;
-    if (currentImageIndex < 0) {
-        currentImageIndex = galleryImages.length - 1;
-    } else if (currentImageIndex >= galleryImages.length) {
-        currentImageIndex = 0;
-    }
-    showImage();
-}
-
-function showImage() {
-    const img = galleryImages[currentImageIndex];
-    document.getElementById('galleryImage').src = img.src;
-    document.getElementById('galleryCaption').textContent = img.alt;
-    document.getElementById('galleryCounter').textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
-}
-
-document.addEventListener('keydown', function(event) {
-    const modal = document.getElementById('galleryModal');
-    if (modal.classList.contains('active')) {
-        if (event.key === 'ArrowLeft') {
-            changeImage(-1);
-        } else if (event.key === 'ArrowRight') {
-            changeImage(1);
-        } else if (event.key === 'Escape') {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-    }
-});
-
-// ==================================================
-// MODAL DE SUCESSO E ENVIO DO FORMULÁRIO
-// ==================================================
-
-function fecharModal() {
-    document.getElementById('modalSucesso').classList.remove('active');
-    document.body.style.overflow = 'auto';
-}
-
-// Flag global para prevenir envios duplicados
-let formularioEnviando = false;
-
-// Aguarda DOM carregar
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // Fechar modal clicando fora
-    const modalSucesso = document.getElementById('modalSucesso');
-    if (modalSucesso) {
-        modalSucesso.addEventListener('click', function(e) {
-            if (e.target.id === 'modalSucesso') {
-                fecharModal();
-            }
-        });
-    }
-
-    // ÚNICO addEventListener para o formulário
-    const formulario = document.getElementById("formulario");
-    if (formulario) {
-        formulario.addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            // Previne envios duplicados
-            if (formularioEnviando) {
-                console.log('⚠️ Envio já em andamento, aguarde...');
-                return false;
-            }
-
-            console.log('✅ Iniciando envio do formulário...');
-            formularioEnviando = true;
-
-            const formData = new FormData(this);
-            const data = {};
-            formData.forEach((value, key) => data[key] = value);
-
-            // Adiciona data e hora
-            data.data_envio = new Date().toLocaleString("pt-BR", {
-                timeZone: "America/Sao_Paulo"
-            });
-
-            // Desabilita botão
-            const btnEnviar = document.getElementById('botao-enviar');
-            const textoOriginal = btnEnviar.innerHTML;
-            btnEnviar.disabled = true;
-            btnEnviar.innerHTML = 'ENVIANDO... <i class="fas fa-spinner fa-spin"></i>';
-
-            fetch("https://hook.us2.make.com/wj7ev8tj8p4xj4qan9thjebhn5rg3052", {
-                method: "POST",
-                body: JSON.stringify(data),
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            })
-            .then(response => {
-                console.log('✅ Formulário enviado com sucesso!');
-                
-                // Reseta formulário
-                formulario.reset();
-                
-                // Restaura botão
-                btnEnviar.disabled = false;
-                btnEnviar.innerHTML = textoOriginal;
-                
-                // Mostra modal
-                document.getElementById('modalSucesso').classList.add('active');
-                document.body.style.overflow = 'hidden';
-                
-                // Libera flag após 2 segundos
-                setTimeout(function() {
-                    formularioEnviando = false;
-                    console.log('🔓 Flag liberada');
-                }, 2000);
-            })
-            .catch(error => {
-                console.error('❌ Erro ao enviar:', error);
-                
-                alert("Ops! Ocorreu um erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.");
-                
-                // Restaura botão
-                btnEnviar.disabled = false;
-                btnEnviar.innerHTML = textoOriginal;
-                
-                // Libera flag
-                formularioEnviando = false;
-            });
-        }, { once: false }); // Garante que só adiciona 1 listener
-    }
-});
-</script>
-
-
-    
 </body>
 </html>

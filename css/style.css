@@ -1163,3 +1163,174 @@ img {
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
+/* ==================================================
+   MENU HAMBÚRGUER - REDES SOCIAIS MOBILE
+   ================================================== */
+
+/* Logo Oliver - Tamanho Mobile */
+@media (max-width: 767px) {
+    .logo-oliver {
+        max-height: 280px !important;
+        width: auto !important;
+    }
+    
+    .navbar-brand {
+        padding: 10px 0 !important;
+    }
+}
+
+/* Botão Hambúrguer */
+.navbar-toggler-custom {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    transition: all 0.3s ease;
+    position: relative;
+    margin-right: 15px;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 2.5px;
+    background-color: black;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Animação do X quando ativo */
+.navbar-toggler-custom.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.navbar-toggler-custom.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler-custom.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Menu de Redes Sociais */
+.social-menu {
+    display: flex;
+    align-items: center;
+}
+
+.social-menu .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+}
+
+/* ========== MOBILE ========== */
+@media (max-width: 767px) {
+    /* Mostra botão hambúrguer no mobile */
+    .navbar-toggler-custom {
+        display: flex;
+    }
+
+    /* Esconde menu por padrão */
+    .social-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+        width: 200px;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        border-radius: 0 0 15px 15px;
+        z-index: 1000;
+    }
+
+    /* Menu ativo (aberto) */
+    .social-menu.active {
+        max-height: 200px;
+        opacity: 1;
+        padding: 15px 0;
+    }
+
+    /* Lista em coluna */
+    .social-menu .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .social-menu .navbar-item {
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        transform: translateX(20px);
+        transition: all 0.3s ease;
+    }
+
+    /* Animação dos itens quando menu abre */
+    .social-menu.active .navbar-item {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .social-menu.active .navbar-item:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .social-menu.active .navbar-item:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+
+    .social-menu.active .navbar-item:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+
+    /* Links */
+    .social-menu .nav-link {
+        padding: 10px 20px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+    }
+
+    .social-menu .nav-link:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: scale(1.1);
+    }
+
+    .social-menu .nav-link i {
+        margin: 0 !important;
+    }
+}
+
+/* ========== DESKTOP ========== */
+@media (min-width: 768px) {
+    /* Esconde botão hambúrguer no desktop */
+    .navbar-toggler-custom {
+        display: none !important;
+    }
+
+    /* Menu sempre visível no desktop */
+    .social-menu {
+        display: flex !important;
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        opacity: 1;
+        max-height: none;
+    }
+
+    .social-menu .navbar-nav {
+        flex-direction: row;
+    }
+}
